@@ -45,3 +45,19 @@ report = metrics.classification_report(y_test,y_pred,digits=4)
 # Cac ban tim doc cac chi so precision, recall (tim thong qua google)
 # de hien ro hon ve bai toan phan lop
 print (report)
+
+#tuy chinh nguong threshold
+
+y_pred =[]
+y_statitic=logistic_regression.predict_proba(X_test)
+threshold = 0.2
+for pre in y_statitic:
+	if pre[0] > threshold:
+		y_pred.append(0)
+	else:
+		y_pred.append(1)
+
+# danh gia lai voi nguong moi
+report = metrics.classification_report(y_test,y_pred,digits=4) 
+
+print (report)
