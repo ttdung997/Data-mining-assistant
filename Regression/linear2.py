@@ -3,9 +3,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Thu vien math dung de goi cac ham tinh toan co ban (binh phuong, khai can)
+from math import sqrt
+
 #import thu vien hoc may sklearn
 from sklearn import linear_model
 from sklearn import metrics
+
+
 
 # Doc du lieu tu file csv:
 data = pd.read_csv("data.csv")
@@ -30,8 +35,18 @@ print("w_1 = ", regr.coef_[0], "w_0 = ", regr.intercept_)
 y_pred = regr.predict(X)
 
 # Su dung metrics de tinh toan cac sai so cua mo hinh
-print('Mean Absolute Error:', metrics.mean_absolute_error(y, y_pred))  #sai so tuyet doi
-print('Mean Squared Error:', metrics.mean_squared_error(y, y_pred))  #sai so binh phuong trung binh
+
+# Sai so tuyet doi
+print('Mean Absolute Error:', metrics.mean_absolute_error(y, y_pred)) 
+
+# Sai so binh phuong trung binh 
+print('Mean Squared Error:', metrics.mean_squared_error(y, y_pred))  
+
+# Sai so can bac 2 trung binh
+print('Root Mean Squared Error:', sqrt(metrics.mean_squared_error(y, y_pred)))
+
+# He so xac dinh : coefficient of determination (R2)
+print('R^2 score:', (metrics.r2_score(y, y_pred)))
 
 # Hien thi du lieu
 
