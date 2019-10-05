@@ -11,6 +11,7 @@ for line in data:
 	line= line.split(",")
 	transactions.append(tuple(line))
 
+# print(transactions)
 #goi thuat toan de xay dung luat, dieu chinh cac tham so min_support, min_confidence
 itemsets, rules = apriori(transactions, min_support=0.05,  min_confidence=0.1)
 
