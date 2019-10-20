@@ -22,7 +22,7 @@ candidates = {'toeic': [780,750,690,710,680,730,690,720,740,690,610,690,710,680,
 
 # chuyen du lieu tu dien ve mang data
 df = pd.DataFrame(candidates,columns= ['toeic', 'gpa','work_experience','admitted'])
-
+df.to_csv("data.csv",index=False)
 
 # du lieu x gom 3 truong, du lieu y
 X = df[['toeic', 'gpa','work_experience']]
