@@ -7,7 +7,7 @@ Github này mình tạo ra nhằm hỗ trợ mã nguồn cho các bạn trong qu
   - Regression: chứa mã nguồn chương trình hồi quy
   - Frequent Pattern: chứa mã nguồn chương trình luật kết hợp
   - Classification: Chứa mã nguồn các chương trình bài toán phân lớp
-  - Clustering: Ch
+  - Clustering: Chứa mã nguồn các chương trình bài toán phân cụm
   - Neural network: chứa mã nguồn các ví dụ về mạng neural nhân tạo
   - Basic: Chứa một số ví dụ về python cơ bản 
 
