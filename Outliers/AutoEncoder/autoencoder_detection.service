@@ -1,0 +1,14 @@
+[Unit]
+Description=AutoEncoder Anomaly Detection
+
+[Service]
+User=root
+Restart=always
+Type=simple
+ExecStart=/usr/bin/python2.7 /opt/AutoEncoder/model.py
+
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
