@@ -115,7 +115,6 @@ class DBSCAN:
         # if display:
         #     self.plotResult(train_data)
 
-        # print(labels)
         self.cluster_info = label
         return label
 
@@ -125,9 +124,6 @@ class DBSCAN:
         for i in range(len(train_data)):
             # lấy các hàng xóm của điểm
             distance = self.calculateDistance(train_data[i], train_data)
-            # print(distance)
-            # quit()
-            # print(distance)
             index = np.where(distance <= self.eps)[0]
             # Kiểm tra mật độ để quyết định
             if len(index) > self.m:
