@@ -102,8 +102,8 @@ class RegularizedDeepAutoencoder(object):
             # Caculate metrics
             acc = metrics.accuracy_score(validate_label, y_result)
             report = metrics.classification_report(validate_label,y_result,digits=4)
-            print '\n clasification report:\n', report
-            print 'Acc:', acc
+            print ('\n clasification report:\n', report)
+            print ('Acc:', acc)
             if acc > best_acc:
                 best_iter = ep
                 best_acc = acc

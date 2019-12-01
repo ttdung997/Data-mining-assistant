@@ -1,0 +1,23 @@
+number of STD:  2.5
+------------------Autoencoder----------------------
+Mean:  0.31580475221051185
+Std:  0.23077981292637786
+threshold:  0.8927542845264566
+________________________________________________--
+Average precision-recall score: 0.94
+Precision: 0.9753
+Recall: 0.9195
+F1: 0.9466
+acc: 0.9427
+Final report!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ clasification report:
+               precision    recall  f1-score   support
+
+           0     0.9071    0.9713    0.9381     12355
+           1     0.9753    0.9195    0.9466     15266
+
+    accuracy                         0.9427     27621
+   macro avg     0.9412    0.9454    0.9423     27621
+weighted avg     0.9448    0.9427    0.9428     27621
+

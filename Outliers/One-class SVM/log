@@ -1,0 +1,55 @@
+data.csv
+[['0.58' '0.00' '0.42' ... '0.90' '0.96' '0.78']
+ ['0.37' '0.00' '0.42' ... '0.92' '0.92' '0.78']
+ ['0.35' '0.00' '0.33' ... '0.81' '0.53' '0.78']
+ ...
+ ['0.31' '0.00' '0.30' ... '0.86' '0.92' '0.78']
+ ['0.36' '0.00' '0.47' ... '0.80' '0.95' '0.67']
+ ['0.32' '0.00' '0.42' ... '0.85' '0.95' '0.78']]
+[['0.31' '0.00' '0.33' ... '0.85' '0.65' '0.44']
+ ['0.36' '0.00' '0.33' ... '0.85' '0.32' '0.44']
+ ['0.21' '0.00' '0.33' ... '0.85' '0.83' '0.44']
+ ...
+ ['0.17' '0.00' '0.33' ... '0.75' '0.80' '0.67']
+ ['0.15' '0.00' '0.33' ... '0.75' '0.86' '0.67']
+ ['0.21' '0.00' '0.33' ... '0.78' '0.75' '0.78']]
+Starting training!!
+Starting training!!
+/home/test/.local/lib/python3.6/site-packages/sklearn/svm/base.py:193: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+.....
+Warning: using -h 0 may be faster
+*
+
+obj is the optimal objective
+ value of the dual SVM problem.
+ rho is the bias term in the decision function sgn(w^Tx - rho).
+ nSV and nBSV are number of support vectors and bounded support vectors (i.e., alpha_i = C)
+. nu-svm is a somewhat equivalent
+ form of C-SVM where C is replaced by nu.
+ nu simply shows the corresponding parameter
+. Accuracy is # correctly predicted data / # total testing data × 100%.
+
+optimization finished, #iter = 5801
+obj = 28930765.752414, rho = 7517.056178
+nSV = 7747, nBSV = 7746
+[LibSVM]--- request/seconds ---0.0013055475880915798
+nomaly percent :0.42031759726079104
+Average precision-recall score: 0.81
+Precision: 0.8502
+Recall: 0.7024
+F1: 0.7693
+acc: 0.7043
+Final report!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ clasification report:
+               precision    recall  f1-score   support
+
+           0     0.5032    0.7089    0.5886     11066
+           1     0.8502    0.7024    0.7693     26025
+
+    accuracy                         0.7043     37091
+   macro avg     0.6767    0.7057    0.6789     37091
+weighted avg     0.7467    0.7043    0.7154     37091
+
+

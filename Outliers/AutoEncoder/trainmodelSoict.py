@@ -98,7 +98,7 @@ def main():
 	y_test=y_test.astype(int)
 	encoder_dim = 200
 	encoder_dim_2 = 250
-	# VAE =Autoencoder()
+	# VAE =RegularizedDeepAutoencoder()
 	# VAE.fit(X_train,validate_data = X_holdout,validate_label=y_holdout,
 	# 	model_dir_path=model_dir_path,epochs = 10,input_dim=maxlen,encoding_dim=encoder_dim)
 
@@ -143,7 +143,7 @@ def main():
 		report_evaluation_metrics(y_test,y_predict)
 		print("Final report!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 		report = metrics.classification_report(y_test,y_predict,digits=4)
-		print '\n clasification report:\n', report
+		print('\n clasification report:\n', report)
 		break
 		# fpr[0], tpr[0], _ = roc_curve(y_test, reconstruction_error)
 		# roc_auc[0] = auc(fpr[0], tpr[0])

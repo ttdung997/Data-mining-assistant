@@ -79,6 +79,8 @@ for ticker in tickerList:
     test_set = test_set.drop('High', 1)
     test_set = test_set.drop('Low', 1)
     test_set = test_set.drop('Open', 1)
+
+
     # test_set.to_csv("test_set.csv")
 
     close_train = np.array(training_set['Close'])
@@ -93,10 +95,10 @@ for ticker in tickerList:
     close_label = close_all[len(close_train)-1:len(close_all)-1]
 
     from statsmodels.tsa.ar_model import AR
-
+    print("__________________________________________________________")
     # # AR example
     print("AR model: ")
-
+    print(close_train)
     model = AR(close_train)
     model_fit = model.fit()
 
@@ -110,10 +112,12 @@ for ticker in tickerList:
            true_predict = true_predict + 1
     print("Trend accuracy: ", str(true_predict/len(close_label)))
 
+
     error = [(x - y)*(x-y) for x, y in zip(yhat, close_label)]
     print("MSE: ", str(mean(error)))
     print("___________________________________________")
 
+    quit()
     # ARIMA example
     from statsmodels.tsa.arima_model import ARMA
     print("MA model: ")

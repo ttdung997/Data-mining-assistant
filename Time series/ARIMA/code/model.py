@@ -141,7 +141,7 @@ RC = 0
 predict = Close_model.predict(LSTM_test_inputs)
 for i in range(0,len(LSTM_test_outputs)):
     try:
-        if (predict[i] - predict[i+5])*(LSTM_test_outputs[i]-LSTM_test_outputs[i+5]) > 0:
+        if (predict[i] - predict[i+1])*(LSTM_test_outputs[i]-LSTM_test_outputs[i+1]) > 0:
             RC = RC +  1
         C = C+1
     except:

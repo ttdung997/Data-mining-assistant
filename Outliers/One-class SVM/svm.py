@@ -12,6 +12,7 @@ from sklearn.ensemble import IsolationForest
 from sklearn.metrics import average_precision_score, recall_score, precision_score, f1_score,accuracy_score
 from sklearn import metrics
 import time
+
 def report_evaluation_metrics(y_true, y_pred):
 	average_precision = average_precision_score(y_true, y_pred)
 	precision = precision_score(y_true, y_pred, labels=[0, 1], pos_label=1)
@@ -35,7 +36,7 @@ def get_data(dataset):
 
 def main():
 
-	dataset = "data.csv"
+	dataset = "soict/data.csv"
 
 	# Read data from training set and testing set
 	print(dataset)
@@ -66,9 +67,9 @@ def main():
 	print(anomaly_test_data)
 
 	nomaly_test_data=nomaly_test_data.astype(float)
-	anomaly_test_data=anomaly_test_data.astype(float)
+	anomaly_test_data=anomaly_test_data[:15000].astype(float)
 	nomaly_test_label=nomaly_test_label.astype(int)
-	anomaly_test_label=anomaly_test_label.astype(int)
+	anomaly_test_label=anomaly_test_label[:15000].astype(int)
 
 	X_test = np.concatenate((nomaly_test_data,anomaly_test_data), axis=0)
 	y_test = np.concatenate((nomaly_test_label,anomaly_test_label), axis=0)
@@ -84,13 +85,13 @@ def main():
 
 	print("Starting training!!")
 	print("Starting training!!")
-	clf = svm.OneClassSVM(nu=0.3 , kernel="rbf",verbose = True)
-	clf.fit(X_train)
+	# clf = svm.OneClassSVM(nu=0.3 , kernel="rbf",verbose = True)
+	# clf.fit(X_train)
 
 
-	# save the model to disk
-	filename = 'models/svm_model.sav'
-	pickle.dump(clf, open(filename, 'wb'))
+	# # save the model to disk
+	filename = 'svm_model.sav'
+	# pickle.dump(clf, open(filename, 'wb'))
 
 	# some time later...
 
@@ -114,5 +115,5 @@ def main():
 
 	print("Final report!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	report = metrics.classification_report(y_test,y_result,digits=4)
-	print '\n clasification report:\n', report
+	print('\n clasification report:\n', report)
 main()
